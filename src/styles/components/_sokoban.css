@@ -1,9 +1,31 @@
+
+.soko-game {
+  &.game-component {
+    .board-row {
+      height: 32px;
+    }
+  }
+
+  .game-board {
+    position: relative;
+
+    .character {
+      overflow: hidden;
+      width: 32px; 
+      height: 32px; 
+      background: transparent url(../assets/012-Braver02.png) repeat 0 0; 
+      position: absolute; 
+      left: 320px; 
+      top: 320px;
+    }
+  }
+}
+
 .sokoban-component {
   .common-square {
     float: left;
     width: 32px;
     height: 32px;
-    box-sizing: border-box;background: url(../assets/magictower.png) -96px -32px;
   }
 
   .magma-bg {
@@ -11,7 +33,11 @@
   }
 
   .ground-bg {
-    background: url(../assets/magictower.png) -192px -736px, url(../assets/magictower.png) -96px -32px;
+    background: url(../assets/magictower.png) -96px -32px;
+  }
+
+  .star-bg {
+    background: url(../assets/magictower.png) -192px -736px, url(../assets/magictower.png) -96px -32px;    
   }
 }
   

@@ -14,7 +14,7 @@
   "scripts": {
     "start-js": "webpack-dev-server --config webpack.config.js --inline",
     "eslint": "eslint src test src",
-    "start": "npm-run-all -p start-js eslint",
+    "dev": "npm-run-all -p start-js eslint",
     "build": "webpack",
     "test": "jest --coverage",
     "prepush": "npm test && npm build",
