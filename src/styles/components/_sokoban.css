@@ -1,0 +1,17 @@
+.sokoban-component {
+  .common-square {
+    float: left;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;background: url(../assets/magictower.png) -96px -32px;
+  }
+
+  .magma-bg {
+    background: url(../assets/magictower.png) -192px -32px;
+  }
+
+  .ground-bg {
+    background: url(../assets/magictower.png) -192px -736px, url(../assets/magictower.png) -96px -32px;
+  }
+}
+  
