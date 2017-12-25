@@ -19,6 +19,13 @@
       top: 320px;
     }
   }
+
+  .box {
+    width: 32px; 
+    height: 32px; 
+    background: transparent url(../assets/magictower.png ) -192px -768px;
+    position: absolute;
+  }
 }
 
 .sokoban-component {
