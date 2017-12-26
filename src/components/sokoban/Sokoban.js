@@ -9,7 +9,7 @@ class Sokoban extends Component {
     
     this.gameOver = false
     
-    this.state = config.slice()[2]
+    this.state = config.slice()[1]
   }
 
   move(evt) {
