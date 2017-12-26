@@ -1,40 +1,15 @@
 import React, { Component } from 'react'
 import SokobanBoard from './SokobanBoard'
-import findIndex from '../utils/DeepArrayIndex'
+import findIndex from '../../utils/DeepArrayIndex'
+import config from './config'
 
 class Sokoban extends Component {
   constructor(props) {
     super(props)
-    this.boardSize = 15,
+    
     this.gameOver = false
-    this.squares = [
-      ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1'],
-      ['1', '1', '2', '2', '2', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1'],
-      ['1', '1', '2', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '1'],
-      ['1', '1', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1'],
-      ['1', '1', '2', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '1', '1'],
-      ['1', '1', '2', '2', '2', '1', '1', '1', '0', '1', '0', '0', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '0', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
-      ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
-    ]
-    this.state = {
-      style: {
-        left: '224px',
-        top: '384px',
-        backgroundPositionX: '0px',
-        backgroundPositionY: '0px'
-      },
-      box: [
-        [4, 9], [4, 10], [5, 8], [7, 8], [8, 7], [8, 9], [8, 11], [9, 8], [11, 8]
-      ]
-    }
+    
+    this.state = config.slice()[2]
   }
 
   move(evt) {
@@ -46,34 +21,34 @@ class Sokoban extends Component {
     const e = evt || window.event
     const keyCode = e.keyCode
     const style = Object.assign({}, this.state.style)
-    const box = this.state.box.slice()
+    const boxes = this.state.boxes.slice()
 
     switch(keyCode) {
     case 37:
-      this.characterMove('left', style, box)
+      this.characterMove('left', style, boxes)
 
       break
     case 38:
-      this.characterMove('top', style, box)
+      this.characterMove('top', style, boxes)
 
       break
     case 39:
-      this.characterMove('right', style, box)
+      this.characterMove('right', style, boxes)
       
       break
     case 40:
-      this.characterMove('bottom', style, box)
+      this.characterMove('bottom', style, boxes)
       
       break
     }
 
     this.setState({
       style,
-      box
+      boxes
     })
   }
 
-  characterMove(direction, style, box) {
+  characterMove(direction, style, boxes) {
     const [position, stepSign, stepSize, boxMove] = this.stepInfo(direction)
     
     if(this.checkFaceTo() === direction) {
@@ -86,8 +61,8 @@ class Sokoban extends Component {
 
     const coord = this.generateCoordinate([style.top, style.left])
     const wallCoord = [coord[0] + boxMove[0], coord[1] + boxMove[1]]
-    const coordIndex  = findIndex(box, coord)
-    const wallCoordIndex = findIndex(box, wallCoord)
+    const coordIndex  = findIndex(boxes, coord)
+    const wallCoordIndex = findIndex(boxes, wallCoord)
 
     if (coordIndex !== undefined && this.checkWall(wallCoord)) {
       style[position] = parseInt(style[position]) - stepSign * 32 + 'px'
@@ -98,7 +73,7 @@ class Sokoban extends Component {
 
       return
     } else if (coordIndex !== undefined) {
-      box[coordIndex] = wallCoord
+      boxes[coordIndex] = wallCoord
     } else {
       if(this.checkWall(coord) ) {
         style[position] = parseInt(style[position]) - stepSign * 32 + 'px'
@@ -138,7 +113,7 @@ class Sokoban extends Component {
     const [i, j] = coord
     const wallList = ['1']
 
-    return wallList.includes(this.squares[i][j])
+    return wallList.includes(this.state.squares[i][j])
   }
 
   generateCoordinate([x, y]) {
@@ -156,7 +131,7 @@ class Sokoban extends Component {
   }
 
   renderBoxList() { 
-    const boxList = this.state.box.map(arr => {
+    const boxList = this.state.boxes.map(arr => {
       const [i,j] = this.generatePosition(arr)
       const style = {
         left: j,
@@ -176,8 +151,8 @@ class Sokoban extends Component {
   calculateCount() {
     let count = 0
     
-    this.state.box.forEach(([i, j]) => {
-      if(this.squares[i][j] === '2'){
+    this.state.boxes.forEach(([i, j]) => {
+      if(this.state.squares[i][j] === '2'){
         count ++
       }
     })
@@ -189,7 +164,7 @@ class Sokoban extends Component {
     const count = this.calculateCount()
     const message = 'Congratulations! You\'ve won the Game.'
 
-    if(count === this.state.box.length) {
+    if(count === this.state.boxes.length) {
       return (
         <div>{message}</div> 
       )
@@ -197,8 +172,11 @@ class Sokoban extends Component {
   }
 
   render() {
+    const globalClass = ['game-component', ' soko-game' ]
+    const groundStyle = this.state.groundStyle
+    globalClass.push(groundStyle)
     return (
-      <div className='game-component soko-game'>
+      <div className={globalClass.join(' ')}>
         <div>
           <a href="/">Home</a>
         </div>
@@ -207,8 +185,8 @@ class Sokoban extends Component {
         <div className="game">
           <div className="game-board">
             <SokobanBoard
-              squares={this.squares}
-              boardSize={this.boardSize}
+              squares={this.state.squares}
+              boardSize={this.state.boardSize}
             />
             <div className='character' style={this.state.style}></div>
             {this.renderBoxList()}

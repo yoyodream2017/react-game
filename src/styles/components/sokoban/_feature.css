@@ -1,0 +1,41 @@
+.default-style {
+  .wall-bg {
+    background: url(../assets/magictower.png) -192px -32px;
+  }
+
+  .ground-bg {
+    background: url(../assets/magictower.png) -96px -32px;
+  }
+
+  .star-bg {
+    background: url(../assets/magictower.png) -192px -736px, url(../assets/magictower.png) -96px -32px;    
+  }
+}
+
+.style-one {
+  .wall-bg {
+    background: url(../assets/magictower.png) -160px -32px;
+  }
+
+  .ground-bg {
+    background: url(../assets/magictower.png) -192px 0;
+  }
+
+  .star-bg {
+    background: url(../assets/magictower.png) -192px -736px, url(../assets/magictower.png) -192px 0;    
+  }
+}
+
+.style-two {
+  .wall-bg {
+    background: url(../assets/magictower.png) -224px -32px;
+  }
+
+  .ground-bg {
+    background: url(../assets/magictower.png) -160px 0;
+  }
+
+  .star-bg {
+    background: url(../assets/magictower.png) -192px -736px, url(../assets/magictower.png) -160px 0;    
+  }
+}
