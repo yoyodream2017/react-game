@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SokobanBoard from './SokobanBoard'
 import findIndex from '../../utils/DeepArrayIndex'
 import config from './config'
-let stageNumber = 0
+let stageNumber = 2
 
 class Sokoban extends Component {
   constructor(props) {
