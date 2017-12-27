@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SokobanBoard from './SokobanBoard'
 import findIndex from '../../utils/DeepArrayIndex'
 import config from './config'
+let stageNumber = 0
 
 class Sokoban extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class Sokoban extends Component {
     
     this.gameOver = false
     
-    this.state = config.slice()[1]
+    this.state = config.slice()[stageNumber]
   }
 
   move(evt) {
@@ -46,6 +47,8 @@ class Sokoban extends Component {
       style,
       boxes
     })
+
+    this.checkStageEnd()
   }
 
   characterMove(direction, style, boxes) {
@@ -124,12 +127,6 @@ class Sokoban extends Component {
     return [ x * 32 + 'px', y * 32 + 'px']
   }
 
-  componentDidMount() {
-    window.addEventListener('keydown', (evt) => {
-      this.move(evt)
-    })
-  }
-
   renderBoxList() { 
     const boxList = this.state.boxes.map(arr => {
       const [i,j] = this.generatePosition(arr)
@@ -148,6 +145,20 @@ class Sokoban extends Component {
     )
   }
 
+  checkStageEnd() {
+    const count = this.calculateCount()
+
+    if (count === this.state.boxes.length) {
+      stageNumber++
+
+      if (stageNumber === config.length) {
+        this.gameOver = true
+      } else {
+        this.setState(config.slice()[stageNumber])        
+      }
+    }
+  }
+
   calculateCount() {
     let count = 0
     
@@ -161,14 +172,23 @@ class Sokoban extends Component {
   }
 
   renderWinning() {
+    const messageGaming = 'Press up, down, left, right to move'
+    const messageGameOver = 'Congratulations! You\'ve won the game.'
     const count = this.calculateCount()
-    const message = 'Congratulations! You\'ve won the Game.'
-
+    
     if(count === this.state.boxes.length) {
       return (
-        <div>{message}</div> 
+        <div>{messageGameOver}</div> 
       )
-    } 
+    }
+
+    return <div>{messageGaming}</div>
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', (evt) => {
+      this.move(evt)
+    })
   }
 
   render() {
