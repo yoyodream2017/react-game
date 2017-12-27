@@ -12,7 +12,7 @@ class CommonSquare extends Component {
     case '0':
       return 'ground-bg'
     case '1':
-      return 'magma-bg'
+      return 'wall-bg'
     case '2':
       return 'star-bg'
     default:

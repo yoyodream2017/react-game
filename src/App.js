@@ -8,7 +8,7 @@ import Home from './pages/Home'
 import ToeGame from './components/ToeGame'
 import Game from './components/Game'
 import GoGame from './components/GoGame'
-import Sokoban from './components/Sokoban'
+import Sokoban from './components/sokoban/Sokoban'
 
 class App extends Component {
   render() {

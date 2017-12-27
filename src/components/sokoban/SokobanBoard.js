@@ -1,6 +1,6 @@
 import React from 'react'
 import CommonSquare from './CommonSquare'
-import Board from './Board'
+import Board from '../Board'
 import { number, array } from 'prop-types'
 
 const propTypes = {

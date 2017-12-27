@@ -1,3 +1,4 @@
 @import 'base/_reset.css';
-@import 'components/_sokoban.css';
+@import 'components/sokoban/_sokoban.css';
 @import 'components/_game.css';
+@import 'components/sokoban/_feature.css';
