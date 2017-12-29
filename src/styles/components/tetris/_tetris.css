@@ -1,0 +1,36 @@
+.tetris {
+  .game-info_button {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .box-bg {
+    background: transparent url(../assets/magictower.png ) -192px -768px;
+    
+    &.tetris-square {
+      border: none;
+    }
+  }
+
+  .game-board {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .board-row {
+    height: 32px;
+  }
+  
+  .box {
+    width: 32px; 
+    height: 32px; 
+    background: transparent url(../assets/magictower.png ) -192px -768px;
+    position: absolute;
+  }
+  .tetris-square {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+  }
+}
