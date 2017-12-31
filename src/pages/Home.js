@@ -11,6 +11,7 @@ class Home extends Component {
             <li><a href='/gobang'>Gobang game</a></li>
             <li><a href='/go'>Go game</a></li>
             <li><a href='/sokoban'>Sokoban</a></li>
+            <li><a href='/tetris'>Tetris</a></li> 
           </ul>
         </div>    
       </div>

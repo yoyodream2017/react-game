@@ -9,6 +9,7 @@ import ToeGame from './components/ToeGame'
 import Game from './components/Game'
 import GoGame from './components/GoGame'
 import Sokoban from './components/sokoban/Sokoban'
+import Tetris from './components/tetris/Tetris'
 
 class App extends Component {
   render() {
@@ -19,7 +20,8 @@ class App extends Component {
           <Route path='/gobang' component={Game}/>
           <Route path='/toe' component={ToeGame}/>
           <Route path='/go' component={GoGame}/>
-          <Route path='/sokoban' component={Sokoban}/>                 
+          <Route path='/sokoban' component={Sokoban}/>
+          <Route path='/tetris' component={Tetris}/>     
         </Switch>
       </Router>
     )

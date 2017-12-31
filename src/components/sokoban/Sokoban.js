@@ -192,7 +192,7 @@ class Sokoban extends Component {
   }
 
   render() {
-    const globalClass = ['game-component', ' soko-game' ]
+    const globalClass = ['game-component', 'soko-game' ]
     const groundStyle = this.state.groundStyle
     globalClass.push(groundStyle)
     return (
