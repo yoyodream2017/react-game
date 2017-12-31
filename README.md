@@ -6,4 +6,3 @@
 ![game-example](https://raw.githubusercontent.com/yoyodream2017/react-game/master/sokoban-example/sokoban1.png)<br />
 ![game-example](https://raw.githubusercontent.com/yoyodream2017/react-game/master/sokoban-example/sokoban2.png)<br />
 ![game-example](https://raw.githubusercontent.com/yoyodream2017/react-game/master/sokoban-example/sokoban3.png)<br />
-
