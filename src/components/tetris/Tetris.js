@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import TetrisBoard from './TetrisBoard'
 import randInt from '../../utils/RandomInt'
+const row = 15
+const col = 10
 
 class Tetris extends Component {
   constructor(props) {
     super(props)
-    this.boardSize = [15, 10]
+    this.boardSize = [row, col]
+    this.pause = true
     this.gameOver = false
     this.timer = null
     this.state = {
       bonus: 0,
-      pause: false,
       type: null,
       direction: null,
       position: [],
@@ -19,50 +21,62 @@ class Tetris extends Component {
     }
   }
 
-  gameClear() {
+  gameStart() {
+    if (this.timer) {
+      return
+    }
 
+    this.pause = false
+    this.generateTimer()
+  }
+
+  gamePause() {
+    this.pause = true
+    
+    if (this.timer) {
+      this.timerClear()
+    }
+  }
+
+  gameClear() {
     clearInterval(this.timer)
 
     this.timer = null
     
     this.gameOver = false
 
-    this.pause = false// in case pause then clear 
+    this.pause = true 
 
     this.setState({
       bonus: 0,
-      type: null,
-      direction: null,
-      position: [],
-      boxes: [],
-      squares: Array.from({length: this.boardSize[0]}).map(() => new Array(this.boardSize[1]).fill('1'))
+      squares: Array.from({length: row}).map(() => new Array(col).fill('1'))
     }, () => {
-      this.resetBlock()
+      this.resetActiveTetris()
     })
   }
 
-  gameStart() {
-    if(this.timer) {
-      return
-    }
+  timerClear() {
+    clearInterval(this.timer)
+    this.timer = null
+  }
 
+  generateTimer() {
     this.timer = setInterval(() => {
-      
       if (this.gameOver) {
+        this.timerClear()
+
         return
       }
 
-      let type = this.state.type
-      let direction = this.state.direction
-      let position = this.state.position.slice()
-      let boxes = this.state.boxes.slice()
+      let position = this.state.position.slice()// Position is core coordinate for transition and rotation.
+      let boxes = this.state.boxes.slice()// The relative coordinates for tetrises.
 
-      position[0]++
+      position[0]++// Meaning auto drop down.
 
       if (this.reachBottom(position, boxes)) {
         position[0]--
 
-        let positions = this.generateBoxPositions(position, boxes)
+        let positions = this.generateBoxPositions(position, boxes)// Defining the absolute coordinates 
 
         this.resetSquares(positions)
 
@@ -70,367 +84,9 @@ class Tetris extends Component {
       }
 
       this.setState({
-        type,
-        direction,
-        position,
-        boxes
+        position
       })
     }, 500)
-  }
-
-  gamePause() {
-
-    if(this.timer) {
-      clearInterval (this.timer)
-      this.timer = null
-      this.pause = true
-    } else {
-      this.timer = setInterval(() => {
-        let type = this.state.type
-        let direction = this.state.direction
-        let position = this.state.position.slice()
-        let boxes = this.state.boxes.slice()
-
-        position[0]++
-
-        if (this.reachBottom(position, boxes)) {
-          position[0]--
-  
-          let positions = this.generateBoxPositions(position, boxes)
-  
-          this.resetSquares(positions)
-  
-          return
-        }
-        this.pause = false
-
-        this.setState({
-          type,
-          direction,
-          position,
-          boxes
-        })
-      }, 500)
-    }
-  }
-
-  resetBlock() {
-    const type = randInt(6)
-    const direction = randInt(4)
-    let [position, boxes] = this.generateBoxes(type, direction)
-
-    this.setState({
-      type,
-      direction,
-      position,
-      boxes
-    })
-  }
-
-  generateBoxes (type, direction) {
-    let boxes = []
-    let position = []
-
-    switch(type) {
-    case 1:
-      switch(direction % 2) {
-      case 1:
-        boxes = [
-          [-1,0], [0, 0], [1, 0], [2, 0]
-        ]
-
-        position = [-3, 4]
-
-        break
-      case 0:
-        boxes = [
-          [0,-1], [0, 0], [0, 1], [0, 2]
-        ]
-
-        position = [-1, 4]
-      
-        break
-      }
-
-      break
-    case 2:
-      switch(direction % 4) {
-      case 1:
-        boxes = [
-          [-1,-1], [-1, 0], [0, 0], [1, 0]
-        ]
-
-        position = [-2, 5]
-
-        break
-      case 2:
-        boxes = [
-          [0, -1], [0, 0], [0, 1], [-1, 1]
-        ]
-
-        position = [-1, 4]
-
-        break
-      case 3:
-        boxes = [
-          [-1, 0], [0, 0], [1, 0], [1, 1]
-        ]
-
-        position = [-2, 4]
-
-        break
-      case 0:
-        boxes = [
-          [1, -1], [0, -1], [0, 0], [0, 1]
-        ]
-
-        position = [-2, 4]
-
-        break
-      }
-    
-      break
-    case 3:
-      switch(direction % 2) {
-      case 1:
-        boxes = [
-          [-1,-1], [-1, 0], [0, 0], [0, 1]
-        ]
-
-        position = [-1, 4]
-
-        break
-      case 0:
-        boxes = [
-          [1, -1], [0, -1], [0, 0], [-1, 0]
-        ]
-
-        position = [-2, 5]
-
-        break
-      }
-
-      break
-    case 4:
-      switch(direction % 1) {
-      case 0:
-        boxes = [
-          [0, 0], [0, 1], [1, 0], [1, 1]
-        ]
-
-        position = [-2, 4]
-
-        break
-      }
-        
-      break
-    case 5:
-      switch(direction % 4) {
-      case 1:
-        boxes = [
-          [-1, 0], [0, -1], [0, 0], [0, 1]
-        ]
-
-        position = [-1, 4]
-
-        break
-      case 2:
-        boxes = [
-          [-1, 0], [0, 0], [0, 1], [1, 0]
-        ]
-
-        position = [-2, 4]
-
-        break
-      case 3:
-        boxes = [
-          [0, -1], [0, 0], [0, 1], [1, 0]
-        ]
-
-        position = [-2, 4]
-
-        break
-      case 0:
-        boxes = [
-          [-1, 0], [0, -1], [0, 0], [1, 0]
-        ]
-
-        position = [-2, 5]
-
-        break
-      }
-      
-      break
-
-    case 6:
-      switch(direction % 4) {
-      case 1:
-        boxes = [
-          [-1,1], [-1, 0], [0, 0], [1, 0]
-        ]
-
-        position = [-2, 4]
-
-        break
-      case 2:
-        boxes = [
-          [0, -1], [0, 0], [0, 1], [1, 1]
-        ]
-
-        position = [-1, 4]
-
-        break
-      case 3:
-        boxes = [
-          [-1, 0], [0, 0], [1, 0], [1, -1]
-        ]
-
-        position = [-2, 5]
-
-        break
-      case 0:
-        boxes = [
-          [-1, -1], [0, -1], [0, 0], [0, 1]
-        ]
-
-        position = [-2, 4]
-
-        break
-      }
-  
-      break
-    }
-    
-    return [position, boxes]
-  }
-
-  moveForbid(method, position, boxes) {
-    let positions = this.generateBoxPositions(position, boxes)
-    let maxY = positions[0][1]
-
-    positions.forEach(arr => {
-      if (maxY < arr[1]) {
-        maxY = arr[1]
-      }
-    })
-
-    const squares = this.state.squares.slice()
-    let runOnce = true
-
-    for (let i = 0; i < positions.length; i++) {
-      const [x, y] = positions[i]
-
-      switch(method) {
-      case 'left':
-        if (x < 0) {
-          continue
-        }
-
-        if (squares[x][y] === '2') {
-          position[1]++
-
-          return
-          
-        }
-
-        break
-      case 'right':
-        if (x < 0) {
-          continue          
-        }
-
-        if (squares[x][y] === '2') {
-          position[1]--
-
-          return
-          
-        }
-        
-        break
-      case 'bottom':
-        if (x < 0) {
-          continue          
-        }
-
-        if ( x > 14 || squares[x][y] === '2' ) {
-          position[0]--
-
-          return
-        }
-
-        break
-      
-
-      case 'change':      
-         
-        if (maxY === 10 && runOnce) {
-          runOnce = false
-          position[1]--
-          let currentPositions = this.generateBoxPositions(position, boxes)
-
-          for (let z = 0; z < currentPositions.length; z++) {
-            const [j, k] = currentPositions[z]
-            if (j < 0) {
-              continue
-            }
-
-            if (j > 14 || squares[j][k] === '2') {
-              position[1]++
-
-              return true
-            }
-          }
-        }
-
-        if (maxY === 11 && runOnce) {
-          runOnce = false
-          position[1] -= 2
-          let currentPositions = this.generateBoxPositions(position, boxes)
-
-          for (let z = 0; z < currentPositions.length; z++) {
-            const [j, k] = currentPositions[z]
-            if (j < 0) {
-              continue
-            }
-
-            if (j > 14 || squares[j][k] === '2') {
-              position[1]+=2
-
-              return true
-            }
-          }
-        }
-
-        if (x < 0) {
-          continue
-        }
-
-        if (y === -1) {
-          position[1]++
-
-          let currentPositions = this.generateBoxPositions(position, boxes)
-
-          for (let z = 0; z < currentPositions.length; z++) {
-            const [j, k] = currentPositions[z]
-            if (j < 0) {
-              continue
-            }
-
-            if (j > 14 || squares[j][k] === '2') {
-              position[1]--
-
-              return true
-            }
-          }
-        }
-
-        if (x > 14 || squares[x][y] === '2') {
-          return true
-        }
-
-      }
-    }
-    
   }
 
   reachBottom(position, boxes) {
@@ -444,7 +100,7 @@ class Tetris extends Component {
         continue
       }
 
-      if (x === 15) {
+      if (x === row) {
         return true
       }
       
@@ -457,11 +113,24 @@ class Tetris extends Component {
     return false
   }
 
-  resetSquares(positions) {
-    const squares = this.state.squares.slice()
+  resetActiveTetris() {
     const type = randInt(6)
     const direction = randInt(4)
     let [position, boxes] = this.generateBoxes(type, direction)
+
+    this.setState({
+      type,
+      direction,
+      position,
+      boxes
+    })
+  }
+
+  resetSquares(positions) {
+    const type = randInt(6)
+    const direction = randInt(4)
+    let [position, boxes] = this.generateBoxes(type, direction)
+    const squares = this.state.squares.slice()    
 
     positions.forEach(arr => {
       const [i, j] = arr
@@ -498,12 +167,11 @@ class Tetris extends Component {
         }
       })
 
-      if (count === 10) {
+      if (count === col) {
         squares.splice(index, 1)
-        squares.unshift(new Array(10).fill('1'))
+        squares.unshift(new Array(col).fill('1'))
         removeLineCount++
       }
-
     })
 
     switch(removeLineCount){
@@ -529,7 +197,182 @@ class Tetris extends Component {
       bonus,
       squares
     })
+  }
 
+  generateBoxes(type, direction) {
+    let boxes = []
+    let position = []
+
+    switch (type) {
+    case 1:
+      switch (direction % 2) {
+      case 0:
+        boxes = [
+          [0,-1], [0, 0], [0, 1], [0, 2]
+        ]
+
+        position = [-1, 4]
+      
+        break
+      case 1:
+        boxes = [
+          [-1,0], [0, 0], [1, 0], [2, 0]
+        ]
+
+        position = [-3, 4]
+
+        break
+      }
+
+      break
+    case 2:
+      switch(direction % 4) {
+      case 0:
+        boxes = [
+          [1, -1], [0, -1], [0, 0], [0, 1]
+        ]
+
+        position = [-2, 4]
+
+        break
+      case 1:
+        boxes = [
+          [-1,-1], [-1, 0], [0, 0], [1, 0]
+        ]
+
+        position = [-2, 5]
+
+        break
+      case 2:
+        boxes = [
+          [0, -1], [0, 0], [0, 1], [-1, 1]
+        ]
+
+        position = [-1, 4]
+
+        break
+      case 3:
+        boxes = [
+          [-1, 0], [0, 0], [1, 0], [1, 1]
+        ]
+
+        position = [-2, 4]
+
+        break
+      }
+    
+      break
+    case 3:
+      switch(direction % 2) {
+      case 0:
+        boxes = [
+          [1, -1], [0, -1], [0, 0], [-1, 0]
+        ]
+
+        position = [-2, 5]
+
+        break
+      case 1:
+        boxes = [
+          [-1,-1], [-1, 0], [0, 0], [0, 1]
+        ]
+
+        position = [-1, 4]
+
+        break
+      }
+
+      break
+    case 4:
+      switch(direction % 1) {
+      case 0:
+        boxes = [
+          [0, 0], [0, 1], [1, 0], [1, 1]
+        ]
+
+        position = [-2, 4]
+
+        break
+      }
+        
+      break
+    case 5:
+      switch(direction % 4) {
+      case 0:
+        boxes = [
+          [-1, 0], [0, -1], [0, 0], [1, 0]
+        ]
+
+        position = [-2, 5]
+
+        break
+      case 1:
+        boxes = [
+          [-1, 0], [0, -1], [0, 0], [0, 1]
+        ]
+
+        position = [-1, 4]
+
+        break
+      case 2:
+        boxes = [
+          [-1, 0], [0, 0], [0, 1], [1, 0]
+        ]
+
+        position = [-2, 4]
+
+        break
+      case 3:
+        boxes = [
+          [0, -1], [0, 0], [0, 1], [1, 0]
+        ]
+
+        position = [-2, 4]
+
+        break
+      }
+      
+      break
+    case 6:
+      switch(direction % 4) {
+      case 0:
+        boxes = [
+          [-1, -1], [0, -1], [0, 0], [0, 1]
+        ]
+
+        position = [-1, 4]
+
+        break
+      case 1:
+        boxes = [
+          [-1,1], [-1, 0], [0, 0], [1, 0]
+        ]
+
+        position = [-2, 4]
+
+        break
+      case 2:
+        boxes = [
+          [0, -1], [0, 0], [0, 1], [1, 1]
+        ]
+
+        position = [-2, 4]
+
+        break
+      case 3:
+        boxes = [
+          [-1, 0], [0, 0], [1, 0], [1, -1]
+        ]
+
+        position = [-2, 5]
+
+        break
+      }
+  
+      break
+    }
+    
+    return [position, boxes]
   }
 
   move(evt) {
@@ -574,7 +417,7 @@ class Tetris extends Component {
     })
   }
 
-  boxMove(method, type, direction, position, boxes) {// eslint-disable-line
+  boxMove(operation, type, direction, position, boxes) {// eslint-disable-line
     const positions = this.generateBoxPositions(position, boxes)
     const squares = this.state.squares.slice()
     let minX = positions[0][1]
@@ -589,7 +432,7 @@ class Tetris extends Component {
       }
     }
 
-    if (method === 'left') {
+    if (operation === 'left') {
       if(minX > 0) {
         position[1]--
       }
@@ -597,8 +440,8 @@ class Tetris extends Component {
       this.moveForbid('left', position, boxes)
     }
 
-    if (method === 'right') {
-      if(maxX < 9) {
+    if (operation === 'right') {
+      if (maxX < (col - 1)) {
         position[1]++
       }
 
@@ -606,13 +449,13 @@ class Tetris extends Component {
 
     }
 
-    if (method === 'bottom') {
+    if (operation === 'bottom') {
       position[0]++
 
       this.moveForbid('bottom', position, boxes)     
     }
 
-    if (method === 'change') {
+    if (operation === 'change') {
 
       for (let z = 0; z < positions.length; z++) {
         const [j, k] = positions[z]
@@ -620,7 +463,7 @@ class Tetris extends Component {
           continue
         }
 
-        if (j > 14 || (k > 0 && squares[j][k-1] === '2') || (k < 14 && squares[j][k+1] === '2')) {
+        if (j >= row || (k > 0 && squares[j][k-1] === '2') || (k < (row-1)  && squares[j][k+1] === '2')) {
 
           return true
         }
@@ -640,12 +483,136 @@ class Tetris extends Component {
     }
   }
 
+  moveForbid(operation, position, boxes) {
+    let positions = this.generateBoxPositions(position, boxes)
+    const squares = this.state.squares.slice()
+    let runOnce = true
+    let maxY = positions[0][1]
+
+    positions.forEach(arr => {
+      if (maxY < arr[1]) {
+        maxY = arr[1]
+      }
+    })
+    
+    for (let i = 0; i < positions.length; i++) {
+      const [x, y] = positions[i]
+
+      switch(operation) {
+      case 'left':
+        if (x < 0) {
+          continue
+        }
+
+        if (squares[x][y] === '2') {
+          position[1]++
+
+          return
+        }
+
+        break
+      case 'right':
+        if (x < 0) {
+          continue          
+        }
+
+        if (squares[x][y] === '2') {
+          position[1]--
+
+          return 
+        }
+        
+        break
+      case 'bottom':
+        if (x < 0) {
+          continue          
+        }
+
+        if ( x >= row || squares[x][y] === '2' ) {
+          position[0]--
+
+          return
+        }
+
+        break
+      case 'change':      
+         
+        if (maxY === col && runOnce) {
+          runOnce = false
+          position[1]--
+          let currentPositions = this.generateBoxPositions(position, boxes)
+
+          for (let z = 0; z < currentPositions.length; z++) {
+            const [j, k] = currentPositions[z]
+            if (j < 0) {
+              continue
+            }
+
+            if (j >= row || squares[j][k] === '2') {
+              position[1]++
+
+              return true
+            }
+          }
+        }
+
+        if (maxY === (col + 1) && runOnce) {
+          runOnce = false
+          position[1] -= 2
+          let currentPositions = this.generateBoxPositions(position, boxes)
+
+          for (let z = 0; z < currentPositions.length; z++) {
+            const [j, k] = currentPositions[z]
+            if (j < 0) {
+              continue
+            }
+
+            if (j >= row || squares[j][k] === '2') {
+              position[1]+=2
+
+              return true
+            }
+          }
+        }
+
+        if (x < 0) {
+          continue
+        }
+
+        if (y === -1) {
+          position[1]++
+
+          let currentPositions = this.generateBoxPositions(position, boxes)
+
+          for (let z = 0; z < currentPositions.length; z++) {
+            const [j, k] = currentPositions[z]
+            if (j < 0) {
+              continue
+            }
+
+            if (j >= row || squares[j][k] === '2') {
+              position[1]--
+
+              return true
+            }
+          }
+        }
+
+        if (x >= row || squares[x][y] === '2') {
+          return true
+        }
+
+      }
+    } 
+  }
+
   generatePosition([x, y]) {
+    
     return [ x * 32 + 'px', y * 32 + 'px']
   }
 
   generateBoxPositions(position, boxes) {
-    
+
     return boxes.map(arr => {
       let array = [] 
       array[0] = arr[0] + position[0]
@@ -689,11 +656,11 @@ class Tetris extends Component {
       this.move(evt)
     })
 
-    this.resetBlock()
+    this.resetActiveTetris()
   }
 
   componentWillUnmount() {
-    this.timer && clearTimeout(this.timer)
+    this.timer && this.timerClear()
   }
 
   render() {
