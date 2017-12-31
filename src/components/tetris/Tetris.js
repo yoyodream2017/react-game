@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TetrisBoard from './TetrisBoard'
-import randNum from '../../utils/RandomNum'
+import randInt from '../../utils/RandomInt'
 
 class Tetris extends Component {
   constructor(props) {
@@ -115,8 +115,8 @@ class Tetris extends Component {
   }
 
   resetBlock() {
-    const type = randNum(5)
-    const direction = randNum(4)
+    const type = randInt(6)
+    const direction = randInt(4)
     let [position, boxes] = this.generateBoxes(type, direction)
 
     this.setState({
@@ -315,6 +315,8 @@ class Tetris extends Component {
     })
 
     const squares = this.state.squares.slice()
+    let runOnce = true
+
     for (let i = 0; i < positions.length; i++) {
       const [x, y] = positions[i]
 
@@ -361,6 +363,44 @@ class Tetris extends Component {
 
       case 'change':      
          
+        if (maxY === 10 && runOnce) {
+          runOnce = false
+          position[1]--
+          let currentPositions = this.generateBoxPositions(position, boxes)
+
+          for (let z = 0; z < currentPositions.length; z++) {
+            const [j, k] = currentPositions[z]
+            if (j < 0) {
+              continue
+            }
+
+            if (j > 14 || squares[j][k] === '2') {
+              position[1]++
+
+              return true
+            }
+          }
+        }
+
+        if (maxY === 11 && runOnce) {
+          runOnce = false
+          position[1] -= 2
+          let currentPositions = this.generateBoxPositions(position, boxes)
+
+          for (let z = 0; z < currentPositions.length; z++) {
+            const [j, k] = currentPositions[z]
+            if (j < 0) {
+              continue
+            }
+
+            if (j > 14 || squares[j][k] === '2') {
+              position[1]+=2
+
+              return true
+            }
+          }
+        }
+
         if (x < 0) {
           continue
         }
@@ -384,47 +424,10 @@ class Tetris extends Component {
           }
         }
 
-        if (maxY === 10) {
-          position[1]--
-          let currentPositions = this.generateBoxPositions(position, boxes)
-
-          for (let z = 0; z < currentPositions.length; z++) {
-            const [j, k] = currentPositions[z]
-            if (j < 0) {
-              continue
-            }
-
-            if (j > 14 || squares[j][k] === '2') {
-              position[1]++
-
-              return true
-            }
-          }
-        }
-
-        if (maxY === 11) {
-          position[1]-=2
-          let currentPositions = this.generateBoxPositions(position, boxes)
-
-          for (let z = 0; z < currentPositions.length; z++) {
-            const [j, k] = currentPositions[z]
-            if (j < 0) {
-              continue
-            }
-
-            if (j > 14 || squares[j][k] === '2') {
-              position[1]+=2
-
-              return true
-            }
-          }
-        }
-
         if (x > 14 || squares[x][y] === '2') {
           return true
         }
 
-        return false
       }
     }
     
@@ -456,8 +459,8 @@ class Tetris extends Component {
 
   resetSquares(positions) {
     const squares = this.state.squares.slice()
-    const type = randNum(6)
-    const direction = randNum(4)
+    const type = randInt(6)
+    const direction = randInt(4)
     let [position, boxes] = this.generateBoxes(type, direction)
 
     positions.forEach(arr => {
