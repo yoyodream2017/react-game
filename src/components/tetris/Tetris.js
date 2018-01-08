@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TetrisBoard from './TetrisBoard'
 import randInt from '../../utils/RandomInt'
-const row = 15
+const row = 20
 const col = 10
 
 class Tetris extends Component {
@@ -86,7 +86,7 @@ class Tetris extends Component {
       this.setState({
         position
       })
-    }, 500)
+    }, 400)
   }
 
   reachBottom(position, boxes) {
