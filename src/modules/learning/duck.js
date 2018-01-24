@@ -24,7 +24,7 @@ export const reducer = (state = initialState, action ) => {
     return state.set('number', Number(new Date()))
   }
   case PONG: {
-    console.log(state.toJS())
+    return state.set('number', 0)
   }
   default:
     return state
