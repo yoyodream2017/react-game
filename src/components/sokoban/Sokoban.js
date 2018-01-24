@@ -2,15 +2,16 @@ import React, { Component } from 'react'
 import SokobanBoard from './SokobanBoard'
 import findIndex from '../../utils/DeepArrayIndex'
 import config from './config'
-let stageNumber = 0
 
 class Sokoban extends Component {
   constructor(props) {
     super(props)
     
     this.gameOver = false
+
+    this.stageNumber = 0// if let stageNumber out of the component,test code cannot change it and cannot refresh to new stage.
     
-    this.state = config.slice()[stageNumber]
+    this.state = config.slice()[this.stageNumber]
   }
 
   move(evt) {
@@ -149,12 +150,12 @@ class Sokoban extends Component {
     const count = this.calculateCount()
 
     if (count === this.state.boxes.length) {
-      stageNumber++
+      this.stageNumber++
 
-      if (stageNumber === config.length) {
+      if (this.stageNumber === config.length) {
         this.gameOver = true
       } else {
-        this.setState(config.slice()[stageNumber])        
+        this.setState(config.slice()[this.stageNumber])        
       }
     }
   }
@@ -164,7 +165,7 @@ class Sokoban extends Component {
     
     this.state.boxes.forEach(([i, j]) => {
       if(this.state.squares[i][j] === '2'){
-        count ++
+        count++
       }
     })
 

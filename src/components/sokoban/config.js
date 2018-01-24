@@ -3,8 +3,14 @@ This file defines the basic config for a sokoban game.
 
   stage: define the stage number
   boardSize: define the game board size
-  groundStyle: define style of wall, ground and star. We defined three: default-style, style-one, style-two
-  squares: define game map-- squares for copy:  [
+  groundStyle: define style of wall, ground and star. We currently define three: default-style, style-one, style-two
+  squares: define game map --- 
+    O: road, where character can walk
+    1: wall, which block the movement of the character
+    2: the star position where boxes are meant to located.
+    Note: Change the number and build the game. Make sure the type of the array element is STRING not NUMBER
+
+  initial squares for copy:  [
       ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
       ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
       ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
@@ -21,7 +27,7 @@ This file defines the basic config for a sokoban game.
       ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'],
       ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
   style: define the initial position and face of the character
-  boxes: define the initial position of the boxes
+  boxes: define the initial coordinate of the boxes
 */
 const config = [
   {

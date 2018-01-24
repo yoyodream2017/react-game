@@ -39,6 +39,7 @@
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^21.2.1",
+    "jsdom": "^11.5.1",
     "postcss": "^6.0.14",
     "postcss-discard-comments": "^2.0.4",
     "postcss-easy-import": "^3.0.0",

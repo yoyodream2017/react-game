@@ -1,0 +1,2152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders fitting snapshot 1`] = `
+<div
+  className="game-component soko-game default-style"
+>
+  <div>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+  </div>
+  <br />
+  <div>
+    Press up, down, left, right to move
+  </div>
+  <div
+    className="game"
+  >
+    <div
+      className="game-board"
+    >
+      <div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square star-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square star-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square star-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square ground-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+        <div
+          className="board-row"
+        >
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+          <span>
+            <div
+              className="sokoban-component"
+            >
+              <div
+                className="common-square wall-bg"
+              />
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        className="character"
+        style={
+          Object {
+            "backgroundPositionX": "0px",
+            "backgroundPositionY": "0px",
+            "left": "160px",
+            "top": "160px",
+          }
+        }
+      />
+      <div
+        className="box"
+        style={
+          Object {
+            "left": "192px",
+            "top": "160px",
+          }
+        }
+      />
+      <div
+        className="box"
+        style={
+          Object {
+            "left": "192px",
+            "top": "192px",
+          }
+        }
+      />
+      <div
+        className="box"
+        style={
+          Object {
+            "left": "192px",
+            "top": "224px",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
